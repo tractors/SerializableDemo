@@ -3,7 +3,8 @@ package com.will.serializabledemo;
 import java.io.Serializable;
 
 public class Student implements Serializable {
-//    private transient String name;//暂时，不保存的意思 transient，不做序列化处理
+    private static final long serialVersionUID = -1600095638402998968L;
+    //    private transient String name;//暂时，不保存的意思 transient，不做序列化处理
     private String name;
     private int age;
     private Score score;
@@ -41,6 +42,7 @@ public class Student implements Serializable {
 }
 
 class Score implements Serializable{
+    private static final long serialVersionUID = 4302765720964473503L;
     private int math;
     private int english;
     private int chinese;
